@@ -13,6 +13,8 @@ public class AuditLogListener {
     @EventListener
     public void handleOrderCreated(OrderCreaterEvent event) {
         // Registro del pedido en los logs
-        logger.info("Registro de pedido: ID: {}, Email: {}, Productos: {}", event.getOrderId(), event.getEmail(), event.getProducts());
+        logger.info("Registro de pedido: ID: {}, Email: {}, Productos: {}, Producto: {}, Cantidad: {}",
+                event.getOrderId(), event.getEmail(), event.getProducts(), event.getProductoNombre(), event.getCantidad());
     }
 }
+

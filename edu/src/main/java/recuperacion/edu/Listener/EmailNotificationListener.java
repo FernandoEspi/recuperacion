@@ -13,6 +13,7 @@ public class EmailNotificationListener {
     @EventListener
     public void handleOrderCreated(OrderCreaterEvent event) {
         // Simulación de envío de correo
-        logger.info("Enviando correo de confirmación a: {}", event.getEmail());
+        logger.info("Enviando correo de confirmación a: {}, para el pedido ID: {}",
+                event.getEmail(), event.getOrderId());
     }
 }

@@ -12,15 +12,15 @@ import lombok.Setter;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // ID único generado automáticamente
+    private Long id;
 
     @Column(nullable = false, unique = true)
-    private String orderId; // Identificador del pedido
+    private String orderId;
 
     @Column(nullable = false)
-    private String email; // Correo electrónico del cliente
+    private String email;
 
     @Column(nullable = false)
-    private String products; // Lista de productos en el pedido
+    private String products;
 
 }
